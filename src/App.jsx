@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
-import MasterItemDetail from "./components/MasterItemDetail";
-import Navigation from "./components/Navigation";
+import ItemDetail from "./components/master/ItemDetail.jsx";
+import Navigation from "./components/Navigation.jsx";
 
 function App() {
   return (
     <div>
       <Navigation />
-      <MasterItemDetail />
+      <ItemDetail />
     </div>
   );
 }

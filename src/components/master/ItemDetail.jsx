@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Form, Button, Nav } from "react-bootstrap";
-import MasterAddItemModal from "./MasterAddItemModal.jsx";
+import MasterAddItemModal from "./AddItemModal.jsx";
 
-const MasterItemDetail = () => {
+const ItemDetail = () => {
   return (
     <Container className="m-3">
       <Row>
@@ -58,4 +58,4 @@ const MasterItemDetail = () => {
   );
 };
 
-export default MasterItemDetail;
+export default ItemDetail;
