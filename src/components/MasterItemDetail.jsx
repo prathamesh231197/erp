@@ -1,10 +1,22 @@
 import React from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Form, Button, Nav } from "react-bootstrap";
+import MasterAddItemModal from "./MasterAddItemModal.jsx";
 
 const MasterItemDetail = () => {
   return (
     <Container className="m-3">
-      <h2>Item Detail</h2>
+      <Row>
+        <Col>
+          <h2>Item Detail</h2>
+        </Col>
+        <Col>
+          <Nav className="justify-content-end">
+            <Nav.Item>
+              <MasterAddItemModal />
+            </Nav.Item>
+          </Nav>
+        </Col>
+      </Row>
       <Row>
         <Col md={6} className="p-2">
           <Form.Group controlId="itemCode">
@@ -26,6 +38,7 @@ const MasterItemDetail = () => {
           <Form.Group controlId="itemCategory">
             <Form.Label>Item Category</Form.Label>
             <Form.Control as="select">
+              <option>Select the Category</option>
               <option value="RM">Raw Material (RM)</option>
               <option value="CM">Consumable (CM)</option>
               <option value="PM">Product Material (PM)</option>
