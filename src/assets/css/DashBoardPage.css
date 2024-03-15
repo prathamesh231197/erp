@@ -1,0 +1,31 @@
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.dashboard-container {
+  padding: 20px;
+  max-width: 300px; /* Limit the width of the container */
+}
+
+.dashboard-item {
+  padding: 10px;
+  height: auto; /* Ensure each item takes up full height of the row */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+.dashboard-item img {
+  max-width: 100px;
+  max-height: 100px;
+  width: auto;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dashboard-item img:hover {
+  transform: scale(1.2);
+}
