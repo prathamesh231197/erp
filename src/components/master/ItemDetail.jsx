@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Form, Button, Nav } from "react-bootstrap";
-import MasterAddItemModal from "./AddItemModal.jsx";
+import AddItemModal from "./AddItemModal.jsx";
 
 const ItemDetail = () => {
   return (
@@ -12,7 +12,7 @@ const ItemDetail = () => {
         <Col>
           <Nav className="justify-content-end">
             <Nav.Item>
-              <MasterAddItemModal />
+              <AddItemModal />
             </Nav.Item>
           </Nav>
         </Col>

@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
-import ItemDetail from "./components/master/ItemDetail.jsx";
+import Bom from "./components/master/Bom.jsx";
 import Navigation from "./components/Navigation.jsx";
 
 function App() {
   return (
     <div>
       <Navigation />
-      <ItemDetail />
+      <Bom />
     </div>
   );
 }
