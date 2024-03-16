@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Modal,
   Nav,
@@ -7,12 +7,24 @@ import {
   Row,
   Col,
   Form,
-} from "react-booststrap";
+} from "react-bootstrap";
 
-const BomAddModal = () => {
+const BomAddModal = ({ show, handleClose, bomObject, bomList, setBomList, setmasterbomList }) => {
+  const [item, setitem] = useState({});
+
+  const handleSubmit = () => {
+    handleClose();
+    setBomList([...bomList, item]);
+    setmasterbomList([...bomList, item]);
+  }
+
+  useEffect(() => {
+    if (bomObject) {
+      setitem(bomObject);
+    }
+  }, [bomObject]);
   return (
     <>
-      <Nav.Link onClick={handleShow}>Create BOM</Nav.Link>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Create BOM</Modal.Title>
@@ -23,7 +35,12 @@ const BomAddModal = () => {
               <Col md={8} className="p-2">
                 <Form.Group controlId="bomCode">
                   <Form.Label>BOM Code</Form.Label>
-                  <Form.Control type="text" placeholder="Enter BOM code" />
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter BOM code"
+                    value={item?.code}
+                    onChange={(e) => setitem({ ...item, code: e.target.value })}
+                  />
                 </Form.Group>
               </Col>
             </Row>
@@ -34,6 +51,8 @@ const BomAddModal = () => {
                   <Form.Control
                     type="text"
                     placeholder="Enter BOM Description"
+                    value={item?.desc}
+                    onChange={(e) => setitem({ ...item, desc: e.target.value })}
                   />
                 </Form.Group>
               </Col>
@@ -42,7 +61,11 @@ const BomAddModal = () => {
               <Col md={8} className="p-2">
                 <Form.Group controlId="bomCategory">
                   <Form.Label>BOM Category</Form.Label>
-                  <Form.Control as="select">
+                  <Form.Control
+                    as="select"
+                    value={item?.category}
+                    onChange={(e) => setitem({ ...item, category: e.target.value })}
+                  >
                     <option>Select the Category</option>
                     <option value="FG">Finished Good(FG)</option>
                     <option value="SA">Sub Assembly (SA)</option>
@@ -54,10 +77,10 @@ const BomAddModal = () => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" className="rounded-pill" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" className="rounded-pill" onClick={handleSubmit}>
             Submit
           </Button>
         </Modal.Footer>

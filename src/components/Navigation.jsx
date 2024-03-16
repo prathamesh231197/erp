@@ -3,7 +3,7 @@ import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 
 const Navigation = () => {
   return (
-    <Navbar bg="primary" variant="dark" expand="lg">
+    <Navbar bg="primary" variant="dark" expand="lg" className="px-3">
       <Navbar.Brand href="#" className="m-2">
         ERP
       </Navbar.Brand>
