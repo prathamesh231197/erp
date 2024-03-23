@@ -10,48 +10,51 @@ const Navigation = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <NavDropdown title="Inventory" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">GRN</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Job Issue</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">
+          {/* To add later */}
+          {/* <NavDropdown title="Inventory" id="basic-nav-dropdown">
+            <NavDropdown.Item href="/inventory/grn">GRN</NavDropdown.Item>
+            <NavDropdown.Item href="/inventory/job-issue">Job Issue</NavDropdown.Item>
+            <NavDropdown.Item href="/inventory/material-issue">
               Material Issue
             </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.4">
+            <NavDropdown.Item href="/inventory/item-inventory">
               Item Inventory
             </NavDropdown.Item>
-          </NavDropdown>
+          </NavDropdown> */}
           <NavDropdown title="Master" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Item Detail</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Party Detail</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">BOM</NavDropdown.Item>
+            <NavDropdown.Item href="/master/item">Item Detail</NavDropdown.Item>
+            <NavDropdown.Item href="/master/party">Party Detail</NavDropdown.Item>
+            <NavDropdown.Item href="/master/bom">BOM</NavDropdown.Item>
           </NavDropdown>
-          <NavDropdown title="Production" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Job Order</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">
+          {/* To add later */}
+          {/* <NavDropdown title="Production" id="basic-nav-dropdown">
+            <NavDropdown.Item href="#">Job Order</NavDropdown.Item>
+            <NavDropdown.Item href="#">
               Drill Down Report
             </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">
+            <NavDropdown.Item href="#">
               Unplanned Actions
             </NavDropdown.Item>
-          </NavDropdown>
+          </NavDropdown> */}
           <NavDropdown title="Purchase" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">
+            <NavDropdown.Item href="/purchase/purchase-order">
               Purchase Order
             </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Requisition</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">
+            <NavDropdown.Item href="/purchase/requisition">Requisition</NavDropdown.Item>
+            <NavDropdown.Item href="/purchase/material-return">
               Material Return
             </NavDropdown.Item>
           </NavDropdown>
-          <NavDropdown title="Accounts" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Invoice</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">
+          {/* To add later */}
+          {/* <NavDropdown title="Accounts" id="basic-nav-dropdown">
+            <NavDropdown.Item href="#">Invoice</NavDropdown.Item>
+            <NavDropdown.Item href="#">
               Customer Deatils
             </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">
+            <NavDropdown.Item href="#">
               Customer Management
             </NavDropdown.Item>
-          </NavDropdown>
+          </NavDropdown> */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>

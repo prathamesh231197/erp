@@ -1,7 +1,9 @@
 import React from "react";
 import { Container, Row, Col, Form } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   return (
     <Container fluid>
       <Row>
@@ -52,7 +54,7 @@ const Login = () => {
                 </div>
               </div>
               <div className="d-grid">
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn btn-primary" onClick={() => navigate("/erp/dashboard")}>
                   Submit
                 </button>
               </div>
